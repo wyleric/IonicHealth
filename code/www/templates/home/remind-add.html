@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ionicApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,height=device-height">
+    <title>添加提醒</title>
+    <link rel="stylesheet" type="text/css" href="../../lib/ionic/css/ionic.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <script type="text/javascript" src="../../lib/ionic/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/remind-add.js"></script>
+
+
+</head>
+
+<body ng-controller="AppCtrl">
+<div class="bar bar-header theme-bg light">
+    <a href="../index.html"><div class="button button-clear button-fff icon ion-chevron-left"></div></a>
+    <i class="title">添加提醒</i>
+    <a href="remind.html"><div class="button button-clear button-fff icon ion-checkmark-round finish-btn"></div></a>
+</div>
+
+<div class="content scroll-content has-header con-padding50">
+
+    <div class="container set-con">
+
+        <!--
+        <ion-content class="has-header padding">
+            <button class="button item item-icon-right" ng-click="showActionsheet()" style="width: 100%; height: 80px;">
+                <div style="position: absolute;top:10px;left: 10px;">
+                <h2 style="font-size: 2rem;">重复</h2>
+                <span style="font-size: 1.2rem;">未开启</span></div>
+                <i class="icon ion-ios-arrow-right"></i></li>
+            </button>
+        </ion-content>
+        -->
+
+        <div class="list list-inset">
+            <div class="item item-icon-right">
+                <h2>重复</h2>
+                <span>未开启</span>
+                <i class="icon ion-ios-arrow-right"></i>
+            </div>
+            <div class="item item-icon-right">
+                 <h2>铃声</h2>
+                 <span>未开启</span>
+                 <i class="icon ion-ios-arrow-right"></i>
+             </div>
+             <div class="item item-toggle">
+                     <h2>振动</h2>
+                     <label class="toggle toggle-balanced">
+                         <input type="checkbox" checked>
+                         <div class="track">
+                             <div class="handle"></div>
+                         </div>
+                     </label>
+             </div>
+             <div class="item item-icon-right">
+                 <h2>备注</h2>
+                 <span>未开启</span>
+                 <i class="icon ion-ios-arrow-right"></i>
+             </div>
+        </div>
+    </div>
+    <div class="timebox">
+
+
+    </div>
+
+</div>
+
+
+<!--<div class="bar bar-footer footer-con">
+    <div class="tabs tabs-stable tabs-icon-top">
+        <a class="tab-item active" style=" color:#fe5454;opacity:1;">
+            <i class="icon ion-heart"></i>血压
+        </a>
+        <a class="tab-item m" style=" color:#fff;opacity:1;">
+            <i class="icon ion-ios-paper-outline"></i>资讯
+        </a>
+        <a class="tab-item m" style=" color:#fff;opacity:1;">
+            <i class="icon ion-ios-world-outline"></i>社区
+        </a>
+        <a class="tab-item m" style=" color:#fff;opacity:1;">
+            <i class="icon ion-android-contact"></i>我的
+        </a>
+    </div>
+</div>-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <!--<a class="button button-clear icon ion-chevron-left" ng-click="closeLogin()"></a>-->
+        <h1 class="title">用户登录</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list gaimi-con">
+            <form name="userlogin" ng-submit="doLogin()">
+                <label class="item-input">
+                    <img src="img/logo.png" class="img-responsive center-block" style="margin-top: 15px; margin-bottom:15px;width:40%;max-width: 180px;"/>
+                </label>
+
+                <label class="item-input">
+                    <span class="input-label m">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                    <input type="text" placeholder="请输入手机号" ng-model="loginData.mobile" >
+                </label>
+
+                <label class="item-input">
+                    <span class="input-label m">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                    <input type="password" placeholder="请输入密码" ng-model="loginData.password" >
+                </label>
+                <a ng-click="register()" class="wjmm assertive">快速注册</a>
+                <button class="button btn-dl" style="margin-top: 30px;" type="submit">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

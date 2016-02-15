@@ -1,0 +1,16 @@
+<ion-modal-view>
+    <div class="bar bar-header theme-bg light">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closePost()"></a>
+        <div class="button button-clear button-fff" style="background: #86dcf8;color: #fff; position: absolute;right: 10px; height: 30px; line-height: 30px;font-size: 1.4rem; padding: 0 10px;" ng-click="doPost()">发表</div>
+        <i class="title">发表主题</i>
+    </div>
+
+    <div class="content scroll-content has-header con-padding50">
+        <div class="fabiao-con">
+            <input type="text" placeholder="标题（可选）" ng-model="postData.title">
+            <textarea rows="30" cols="" placeholder="内容" style="width:100%;overflow:auto;" ng-model="postData.content"></textarea>
+        </div>
+    </div>
+
+
+</ion-modal-view>
