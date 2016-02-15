@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closeReport()"></a>
+        <h1 class="title">测评结果</h1>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input" style="border: none; background: #ffc6bc;">
+            <select style="width:50%; margin: 0 25%; background: #fff; border: none; padding: 5px 10px; font-size: 16px; border-radius: 5px; "  ng-options="family.id as family.name for family in familys" ng-model="recordData.familyid"></select>
+        </label>
+        <div ng-repeat="family in familys | filter:{id:recordData.familyid}" class="container">
+            <p class="text-center pg-time">{{family.addtime}}</p>
+            <div class="numcon">
+                <div class="title"><img src="img/home/xueyazhi.png" class="img-responsive"/>高压：{{family.sBP}}mmHg &nbsp;&nbsp;&nbsp;&nbsp;   低压：{{family.dBP}}mmHg</div>
+                <div class="scope">
+                    <img src="img/home/xueya05.png" class="img-responsive center-block"/>
+                </div>
+            </div>
+            <div class="numcon">
+                <div class="title"><img src="img/home/xinlv.png" class="img-responsive"/>心率：{{family.pulse}}次/分</div>
+                <div class="scope">
+                    <img src="img/home/xinlv02.png" class="img-responsive center-block"/>
+                </div>
+            </div>
+            <div class="numcon">
+                <div class="title"><img src="img/home/jieguo.png" class="img-responsive"/>结果解读</div>
+                <div class="neir">
+                    <p> 1.您本次测量血压高压略高一些，请注意不良的饮食生活习惯，及时调整，长期这样下去很有可能导致高血压！<br/>
+                        2.心率正常。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

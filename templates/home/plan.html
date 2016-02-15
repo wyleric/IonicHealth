@@ -1,0 +1,50 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closePlan()"></a>
+        <h1 class="title">降压方案</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div>
+            <label class="item item-input" style="border: none; background: #ffc6bc;">
+                <select style="width:50%; margin: 0 25%; background: #fff; border: none; padding: 5px 10px; font-size: 16px; border-radius: 5px; "  ng-options="family.id as family.name for family in familys" ng-model="planData.familyid"></select>
+            </label>
+        </div>
+        <div class="numbox">
+            <div class="row" ng-repeat="family in familys | filter:{id:planData.familyid}">
+                <div class="col con-n mubiao">
+                    <h3 class="text-center mb">目标血压</h3>
+                    <p>高压：120mmHg<br/>
+                        低压：90mmHg<br/>
+                        心率：90bmp
+                    </p>
+                </div>
+                <div class="col con-n">
+                    <h3 class="text-center dq">当前血压</h3>
+                    <p>高压：{{family.sBP}}mmHg<br/>
+                        低压：{{family.dBP}}mmHg<br/>
+                        心率：{{family.pulse}}bmp
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="planbox">
+            <h3><i class="icon ion-clipboard"></i>健康方案</h3>
+            <table class="plan-table">
+                <tr>
+                    <td class="tit">饮食</td>
+                    <td class="neir">1.首先要控制能量的摄入，提倡吃复合糖类，如淀粉、玉米，少吃葡萄糖，因其属于单糖，易引起血脂升高。<br/>
+                        2.限制脂肪的摄入。烹调时，选用植物油。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tit">运动</td>
+                    <td class="neir">运动多高血压很重要。运动处理可以促进血压循环，降低胆固醇的生成外，并能减少肌肉、骨骼与关节僵硬 的发生。</td>
+                </tr>
+                <tr>
+                    <td class="tit">心理</td>
+                    <td class="neir">高血压患者的心理表现为紧张、易怒、情绪不稳，这些又都是是血压升高的诱因，患者可通过改变自己的行为方式，培养对自然环境和社会的良好适应能力，避免情绪激动及过度紧张、焦虑。</td>
+                </tr>
+            </table>
+        </div>
+    </ion-content>
+</ion-modal-view>

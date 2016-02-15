@@ -1,0 +1,39 @@
+<ion-header-bar class="bar-theme" align-title="center">
+  <h1 class="title">资讯</h1>
+</ion-header-bar>
+<ion-tabs class="tabs-theme tabs-striped tabs-top has-header has-tabs-top">
+  <ion-tab title="降压保健" on-select="getZiXun(1)">
+    <ion-view>
+      <ion-content>
+        <ion-refresher pulling-text="下拉刷新" refreshing-text="获取数据中..." on-refresh="doRefresh(1)"></ion-refresher>
+        <ul class="list info-list" ng-repeat="health in healths">
+          <li class="item item-thumbnail-left" ng-click="views('{{health.title}}','{{health.content}}}')">
+            <img src="{{health.image}}">
+            <h2>{{health.title}}</h2>
+            <p>{{health.content}}</p>
+            <span><a> 查看全部》</a></span>
+          </li>
+        </ul>
+        <div style="height: 50px;"></div>
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+
+  <ion-tab title="饮食健康" on-select="getZiXun(2)">
+    <ion-view>
+      <ion-content>
+        <ion-refresher pulling-text="下拉刷新" refreshing-text="获取数据中..." on-refresh="doRefresh(2)"></ion-refresher>
+        <ul class="list info-list" ng-repeat="health in healths">
+          <li class="item item-thumbnail-left" ng-click="views('{{health.title}}','{{health.content}}}')">
+            <img src="{{health.image}}">
+            <h2>{{health.title}}</h2>
+            <p>{{health.content}}</p>
+            <span><a> 查看全部》</a></span>
+          </li>
+        </ul>
+        <div style="height: 50px;"></div>
+        <ion-infinite-scroll on-infinite="" ng-if="load_over"></ion-infinite-scroll>
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+</ion-tabs>

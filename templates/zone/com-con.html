@@ -1,0 +1,38 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closeViewPost()"></a>
+        <h1 class="title">{{viewpostData.title}}</h1>
+    </ion-header-bar>
+    <ion-content class="shequcon">
+            <div class="list note container">
+                <div class="item">
+                    <div class="note-box1 item-thumbnail-left">
+                        <img src="img/user/touxiang.png">
+                        <h2 class="name">{{viewpostData.username}}</h2>
+                        <h2 class="time">{{viewpostData.addtime}}</h2>
+                    </div>
+                    <p>{{viewpostData.content}}</p>
+                </div>
+            </div>
+            <div class="list pinglun">
+                <h3 class="title"><i class="icon ion-chatbox-working"></i>全部评论({{viewpostData.sizes}}) </h3>
+                <div class="list">
+                    <div class="item item-avatar" ng-repeat="reply in viewpostData.replys">
+                        <img src="img/user/touxiang.png">
+                        <h2>{{reply.userid}}</h2>
+                        <p>{{reply.content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="block30"></div>
+    </ion-content>
+    <ion-footer-bar class="item-input-inset"  >
+        <label class="item item-light item-input-wrapper item-button-right ">
+            <input type="text" placeholder="回复" ng-model="viewpostData.replyContent" >
+        </label>
+        <button class="button button-small button-clear button-positive " ng-click="saveReply()" ng-model="viewpostData.postid" ><!--ng-click="saveReply('{{viewpostData.postid}}')"-->
+            提交
+        </button>
+    </ion-footer-bar>
+
+</ion-modal-view>

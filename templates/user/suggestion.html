@@ -1,0 +1,14 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closeSuggestion()"></a>
+        <h1 class="title">意见反馈</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="container jianyi">
+            <form name="suggestion" ng-submit="suggestionAdd()">
+                <textarea rows="15" cols="" placeholder="请输入您的意见或建议" ng-model="suggestionData.content"></textarea>
+                <button class="button button-clear" type="submit">提交</button>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closeJifen()"></a>
+        <i class="title">我的积分</i>
+    </ion-header-bar>
+    <ion-content class="jifen">
+        <div class="top-box">
+            <div class="list">
+                <div class="item">
+                    <img src="img/user/touxiang.png" style="width:80px; height:80px;border-radius:50px; overflow:hidden; float: left; margin-right: 10px;">
+                    <h2 style="font-size:20px;font-size: 2rem; margin-top:26px;">当前积分：{{jifenData.jifen}}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container jifen-con">
+            <div class="title">
+                <span>做任务赚积分</span>
+            </div>
+            <ul class="list">
+                <li class="item">
+                    <h3>1.每日签到</h3>
+                    <p>签到赚积分规则：签到一次+10积分。</p>
+                    <!--<a href="tab-homepage.html"> <i class="ann">去做任务>></i></a>-->
+                </li>
+                <li class="item">
+                    <h3>2.发帖</h3>
+                    <p>第一次发帖奖励30积分，之后每发帖一次奖励10积分。</p>
+                    <!--<a href="../zone/publish.html"> <i class="ann">去做任务>></i></a>-->
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-modal-view>

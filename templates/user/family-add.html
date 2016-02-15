@@ -1,0 +1,42 @@
+<ion-modal-view>
+    <ion-header-bar class="theme-bg light" align-title="center">
+        <a class="button button-clear icon ion-chevron-left" ng-click="closeFamilyAdd()"></a>
+        <h1 class="title">我的家人</h1>
+    </ion-header-bar>
+    <ion-content>
+        <form name="addfamily" ng-submit="doAddFamily()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">昵称</span>
+                    <input type="text" placeholder="请输入家人昵称"  style="text-align: right; margin-right: 0px;" ng-model="familyAddData.name"/>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">生日</span>
+                    <ionic-datepicker input-obj="datepickerObject">
+                        <input type="text"  placeholder="请选择生日" ng-model="familyAddData.birthday" style="text-align: right; margin-right: 20px;" >
+                    </ionic-datepicker>
+                    <!--<i class="icon ion-ios-calendar" style="font-size: 3rem;position: absolute;top:10px; right: 15px; text-align: right;" ></i>-->
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">性别</span>
+                    <select style="position: absolute; right: 15px;top: 13px; border: none;" ng-model="familyAddData.sex">
+                        <option value="1">男</option>
+                        <option value="0">女</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">体重</span>
+                    <input type="number" placeholder="输入体重" style="text-align: right; margin-right: 20px;" ng-model="familyAddData.weight">
+                    <span class="input-label" style="position: absolute; right: 5px; text-align: right;">Kg</span>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">备注</span>
+                    <input type="text" placeholder="请输入您要备注的内容"  style="text-align: right; margin-right: 20px;" ng-model="familyAddData.remark">
+                </label>
+            </div>
+            <div class="ff-ann">
+                <button class="button light" type="submit">提   交</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
